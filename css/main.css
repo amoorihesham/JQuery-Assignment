@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Noto Sans", sans-serif;
+  overflow: hidden;
+}
+/**** Header Section ****/
+.header {
+  height: 100vh;
+  background-image: url(../imgs/events-heavenly-header.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+.overlay {
+  background-color: rgba(214, 46, 51, 0.6);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.overlay h1 {
+  font-size: 60px;
+  font-weight: 500;
+}
+@media (max-width: 767px) {
+  .overlay h1 {
+    font-size: 48px;
+  }
+}
+.overlay p {
+  font-size: 16px;
+  font-weight: 400;
+}
+/******************************** End Header Section *************************************/
+/**** Singers Section ****/
+.singers {
+  padding-block: 80px;
+}
+.singers h3 {
+  font-size: 28px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.singers p {
+  color: #212529;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: rgb(204, 204, 204);
+  display: none;
+  margin: 0;
+}
+/******************************** End Singers Section *************************************/
+/**** OuntDown Section ****/
+.countdown {
+  position: relative;
+  background-image: url(../imgs/invitation-2508607__340.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  height: 550px;
+}
+/******************************** End CountDown Section *************************************/
+/**** JoinUs Section ****/
+.join {
+  padding-block: 80px;
+}
+textarea {
+  height: 200px;
+  resize: none;
+}
+@media (max-width: 767px) {
+  .social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .input-group button {
+    margin-inline: auto;
+    width: 50% !important;
+    margin-top: 10px !important;
+    padding-block: 15px !important;
+  }
+}
+.social a:hover {
+  background-color: rgb(233, 28, 35);
+  color: white !important;
+}
+/******************************** End JoinUs Section *************************************/
+/********* Global And Various Things *********/
+/*** SideBar Section ***/
+.options {
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  z-index: 99999;
+  cursor: pointer;
+}
+.sidebar {
+  left: -250px;
+  top: 0;
+  height: 100vh;
+  z-index: 99999;
+  width: 250px;
+}
+.sidebar button {
+  top: 10px;
+  right: 25px;
+}
+@media (max-width: 767px) {
+  .options {
+    top: 25%;
+    transform: translateY(-25%);
+  }
+  .sidebar {
+    width: 190px;
+    left: -190px;
+  }
+}
+/*** End SideBar Section ***/
+/*** Spinners Section ***/
+.loading {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #212529;
+  z-index: 999999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loader {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  border: 3px solid;
+  border-color: #fff #fff transparent transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader::after,
+.loader::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 3px solid;
+  border-color: transparent transparent #ff3d00 #ff3d00;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: rotationBack 0.5s linear infinite;
+  transform-origin: center center;
+}
+.loader::before {
+  width: 32px;
+  height: 32px;
+  border-color: #fff #fff transparent transparent;
+  animation: rotation 1.5s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotationBack {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+/***End Spinner Section ***/
